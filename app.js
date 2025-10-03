@@ -2,12 +2,12 @@ const app = Vue.createApp({
   data() {
     return {
       output: '',
-      output2: ''
+      confirmed: ''
     }
   },
   methods: {
-    setOutput2(event) {
-      this.output2 = event.target.value;
+    setConfirmed() {
+      this.confirmed = this.output;
     },
     setOutput(event) {
       this.output = event.target.value;

@@ -26,8 +26,12 @@
       <p>{{ output }}</p>
       <hr />
       <!-- 3) Repeat 2) but only output the entered value if the ENTER key was pressed -->
-      <input type="text" v-on:keydown.enter="setOutput2" />
-      <p>{{ output2 }}</p>
+      <input
+        type="text"
+        v-on:keydown="setOutput"
+        v-on:keyup.enter="setConfirmed"
+      />
+      <p>{{ confirmed }}</p>
     </section>
   </body>
 </html>
